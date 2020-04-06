@@ -3,17 +3,17 @@
 using namespace std;
 
 int main(void){
-    int N, K, price;
+    int a, K, price;
     long long int totalAmount = 0;
     priority_queue<int> prices;
-    cin >> N >> K;
-    for(int i = 0; i < N; i++){
+    cin >> a >> K;
+    for(int i = 0; i < a; i++){
         cin >> price;
         prices.push(price);
     }
 
     int x;
-    for (x = 0; x < N; ++x) {
+    for (x = 0; x < a; ++x) {
             totalAmount += (x / K + 1) * prices.top();
             prices.pop();
 
